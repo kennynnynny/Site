@@ -1,0 +1,390 @@
+:root{
+  --dark: #19191B;
+  --gray: #696871;
+  --pink: #5454d4;
+  --orange: #FF7143;
+}
+
+html{
+  scroll-padding: 100px;
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: "DM Sans", sans-serif;
+}
+
+main{
+  margin-top: 141px;
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  background: white;
+  padding-block: 30%;
+  z-index: 999;
+  top: 0;
+}
+
+.header {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.header_conteiner , .hero_container, .companies_container , .index_container , .features__container , .Point_container {
+  max-width: 1069px;
+  margin-inline: auto;
+}
+.header_nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header_list{
+  display: flex;
+  list-style: none;
+  gap: 49px;
+}
+
+.header_list_link{
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: -0.47px;
+  color: var(--gray);
+}
+
+.header_list_link:hover {
+  color: var(--dark);
+}
+
+.header_list_link.active {
+  color: var(--dark);
+  border-bottom: 3px solid var(--pink);
+  padding-bottom: 6px;
+  transition: color 0.3;
+}
+
+ul{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+}
+
+.header_button {
+  font-weight: 700;
+  font-size: 17px;
+  letter-spacing: -0.53px;
+  color: white;
+  padding: 19px 59px;
+  background-color: var(--orange);
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.header_button:hover , .hero_button:hover {
+  opacity: 90%;
+}
+
+.hero{
+  padding-block: 70px;
+}
+
+.hero_container{
+  position: relative;
+}
+
+.hero_image{
+  position: absolute;
+  top: 0;
+  right: -75px;
+}
+
+.hero_title {
+  font-weight: 700;
+  font-size: 80px;
+  letter-spacing: -2.5px;
+  line-height: 77px;
+  color: var(--dark);
+}
+
+.hero_desc {
+  font-family: "Mulish",sans-serif;
+  font-size: 20px;
+  letter-spacing: -0.63px;
+  line-height: 30px;
+  color: var(--gray);
+  margin-top: 30px;
+}
+
+.hero_buttons {
+  margin-top: 50px;
+  display: flex;
+  gap: 40px;
+}
+
+.hero_button{
+  font-weight: 700;
+  font-size: 17px;
+  letter-spacing: -0.53px;
+  color: white;
+  padding: 19px 59px;
+  background-color: var(--pink);
+  border-radius: 10px;
+  transition: 0.3s;
+}
+.hero_scroll {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #E7E7E7;
+  border-radius: 100px;
+}
+
+.hero_content{
+  max-width: 423px;
+  padding-block: 92px;
+}
+
+.companies{
+  padding-block: 30px;
+}
+
+.companies_list{
+  display: flex;
+  list-style: none;
+  gap: 49px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.features {
+    padding-block: 120px;
+}
+
+.features__container {
+    display: flex;
+    flex-direction: column;
+    gap: 69px;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.feature__content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 459px;
+}
+
+.feature__title {
+    font-weight: 700;
+    font-size: 50px;
+    letter-spacing: -1.56px;
+    line-height: 57px;
+}
+
+.feature__desc {
+    font-family: "Mulish", sans-serif;
+    font-size: 20px;
+    letter-spacing: -0.63px;
+    line-height: 30px;
+}
+
+.feature__link {
+    font-weight: 700;
+    font-size: 17px;
+    letter-spacing: -0.63px;
+    color: var(--pink);
+}
+
+.feature__link:hover {
+    text-decoration: underline;
+}
+
+.Point{
+  padding-block: 32px;
+}
+
+.Point_container{
+  display: grid;
+  justify-content: space-between;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 74px;
+}
+
+.Point{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  text-align: center;
+}
+
+.Point_header{
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.Point_title {
+font-weight: 700;
+font-size: 24px;
+letter-spacing: -0.75px;
+line-height: 36px;
+}
+
+.Point_desc {
+font-family: "Mulish", sans-serif;
+letter-spacing: -0.5px;
+line-height: 24px;
+color: var(--gray);
+}
+
+.Point_header_image{
+  height: 97px;
+}
+
+
+.Sub_conteiner{
+  max-width: 1069px;
+  margin-inline: auto;
+}
+
+.Sub{
+  padding-block: 118px 158px;
+}
+
+.Sub_conteiner{
+  display: flex;
+  flex-direction: column;
+  gap: 82px;
+}
+
+.Sub_header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Sub_title{
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 70px;
+}
+
+.Sub_tabs{
+  display: flex;
+  border-block: 5px solid #F7F7FB;
+  border-inline: 6px solid #F7F7FB;
+  border-radius: 10px;
+}
+
+.Sub_tab{
+  font-family: inherit;
+  border: none;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: -0.5px;
+  background: #F7F7FB;
+  padding: 17px 56px;
+  color: var(--dark);
+  border-radius: 0 10px 10px 0;
+  cursor: pointer;
+}
+
+.Sub_tab.active {
+  background: var(--pink);
+  border-radius: 10px 0 0 10px;
+  color: rgb(255, 255, 255);
+}
+
+
+
+.Sub_plans{
+  display: grid;
+  grid-template-columns: 330fr 376fr 330fr;
+  gap: 17px;
+}
+
+.Sub_plan {
+    padding: 34px 23px 27px;
+    background: #F8F8F8;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.Sub_plan-title {
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: -0.56px;
+    line-height: 28px;
+    color: var(--gray);
+}
+
+.Sub_plan-price {
+    font-weight: 700;
+    font-size: 60px;
+    letter-spacing: -1.03px;
+    line-height: 56px;
+    color: var(--dark);
+    margin-top: 22px;
+}
+
+.Sub_plan-price > span {
+    font-size: 28px;
+}
+
+.sub_points {
+    font-family: "Mulish", sans-serif;
+    font-size: 17px;
+    letter-spacing: -0.53px;
+    line-height: 50px;
+    color: var(--gray);
+    margin-top: 28px;
+}
+
+.Sub_plan-button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background: white;
+    padding-block: 19px;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 17px;
+    letter-spacing: -0.53px;
+    color: var(--purple);
+    margin-top: 36px;
+}
+
+.Sub_plan.active {
+    background: var(--orange);
+}
+
+.Sub_plan.active .Sub_plan-title {
+    color: rgba(255, 255, 255, 0.804);
+}
+
+.Sub_plan.active .Sub_plan-price,
+.Sub_plan.active .sub_points,
+.Sub_plan.active .Sub_plan_button {
+    color: white;
+}
+
+.Sub_plan.active .Sub_plan_button {
+    background: #9F3919;
+}
