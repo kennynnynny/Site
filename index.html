@@ -13,7 +13,7 @@
             theme: {
                 extend: {
                     colors: {
-                        "primary": "#7eff29",
+                        "primary": "#008855",
                         "brutal-black": "#000000",
                         "brutal-white": "#ffffff",
                     },
@@ -47,10 +47,10 @@
                 padding: 4px 8px;
                 display: inline-block;
                 border: 2px solid black;
-                box-shadow: 2px 2px 0px #7eff29;
+                box-shadow: 2px 2px 0px #008855;
             }
             .industrial-tag {
-                background-color: #7eff29;
+                background-color: #008855;
                 color: #000;
                 font-family: 'Space Mono', monospace;
                 text-transform: uppercase;
@@ -66,7 +66,7 @@
                 background-color: #f3f3f3;
                 color: #000;
                 transform: rotate(-1deg);
-                box-shadow: 4px 4px 0px #7eff29;
+                box-shadow: 4px 4px 0px #008855;
                 border: 1px solid #ddd;
             }
             .distorted-title {
@@ -96,6 +96,31 @@
             scroll-behavior: smooth;
         }
     </style>
+
+<script>
+    const btn = document.getElementById('menu-btn');
+    const menu = document.getElementById('menu-links');
+
+    btn.addEventListener('click', () => {
+        // Переключаем класс для анимации иконки
+        btn.classList.toggle('menu-open');
+        // Показываем/скрываем меню
+        menu.classList.toggle('hidden');
+        menu.classList.toggle('flex');
+    });
+
+    // Закрытие при клике на ссылку
+    document.querySelectorAll('#menu-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            if (window.innerWidth < 768) {
+                btn.classList.remove('menu-open');
+                menu.classList.add('hidden');
+                menu.classList.remove('flex');
+            }
+        });
+    });
+</script>
+
 </head>
 
 <body class="bg-brutal-black text-brutal-white antialiased overflow-x-hidden">
@@ -106,13 +131,24 @@
         <div class="cut-out-box !border-2 !px-2 transform -rotate-1">
             <span class="font-display text-lg md:text-xl text-white">KEYW AEL'</span>
         </div>
-        <nav class="flex flex-wrap justify-end gap-1 md:flex-col md:items-end">
-            <a class="stamped-label text-[10px] hover:bg-primary" href="#keywael">01_COVER</a>
-            <a class="stamped-label text-[10px] hover:bg-primary" href="#kroyal">02_KROYAL</a> 
-            <a class="stamped-label text-[10px] hover:bg-primary" href="#krabo">03_KRABO</a>
-            <a class="stamped-label text-[10px] hover:bg-primary" href="#krabosport">04_KRABOSPORT</a>
-            <a class="stamped-label text-[10px] hover:bg-primary" href="#support">05_SUPPORT</a>
-            <a class="stamped-label text-[10px] hover:bg-primary" href="#footer">06_FOOTER</a>    
+        <nav class="relative flex flex-col items-end p-4">
+    
+            <button id="menu-btn" class="group p-2 md:hidden flex flex-col gap-1.5 z-50 focus:outline-none">
+                <span class="line w-6 h-0.5 bg-black transition-all duration-300 origin-center"></span>
+                <span class="line w-6 h-0.5 bg-black transition-all duration-300"></span>
+                <span class="line w-6 h-0.5 bg-black transition-all duration-300 origin-center"></span>
+            </button>
+
+            <div id="menu-links" class="hidden absolute top-12 right-4 bg-white/95 backdrop-blur-sm p-6 shadow-2xl rounded-xl flex-col gap-4 z-40 border border-gray-100
+                        md:static md:flex md:flex-col md:p-0 md:shadow-none md:bg-transparent md:items-end md:gap-1 md:border-none">
+                
+                <a class="stamped-label text-[12px] md:text-[10px] hover:text-primary transition-colors" href="#keywael">01_COVER</a>
+                <a class="stamped-label text-[12px] md:text-[10px] hover:text-primary transition-colors" href="#kroyal">02_KROYAL</a> 
+                <a class="stamped-label text-[12px] md:text-[10px] hover:text-primary transition-colors" href="#krabo">03_KRABO</a>
+                <a class="stamped-label text-[12px] md:text-[10px] hover:text-primary transition-colors" href="#krabosport">04_KRABOSPORT</a>
+                <a class="stamped-label text-[12px] md:text-[10px] hover:text-primary transition-colors" href="#support">05_SUPPORT</a>
+                <a class="stamped-label text-[12px] md:text-[10px] hover:text-primary transition-colors" href="#footer">06_FOOTER</a>    
+            </div>
         </nav>
     </div>
 </header>
@@ -265,7 +301,7 @@
     <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-end gap-12">
         <div class="space-y-6">
             <div class="bg-black text-white p-4 transform -rotate-2 inline-block">
-                <h4 class="font-display text-4xl md:text-6xl leading-[0.8]">CONNECT<br/>OR DIE</h4>
+                <h4 class="font-display text-4xl md:text-6xl leading-[0.8]">CONNECT</h4>
             </div>
             <div class="flex flex-wrap gap-2 md:gap-4">
                 <a  href="https://www.instagram.com/keyw_ael" target="_blank" class="stamped-label !bg-black !text-white hover:!bg-primary hover:!text-black" href="#">INSTA</a>
@@ -278,8 +314,11 @@
         </div>
         <div class="w-full md:w-auto text-left md:text-right">
             <div class="bg-black text-white p-6 transform rotate-1 border-4 border-primary inline-block mb-6">
-            <div class="barcode mb-2 !bg-white">BY_YUNUS_A</div>
-            <div class="font-bold text-xs uppercase">© 2026 ALL RIGHTS RESERVED / NO PERMISSION NEEDED</div>
+            <div class="barcode mb-2 !bg-white">|||| || | ||||| || ||||| || ||||| || ||||| || 001</div>
+            <div class="font-bold text-xs uppercase">© 2026 Keyw Ael'</div>
+        </div>
+        <div class="flex gap-6 justify-end text-xs font-bold uppercase tracking-widest">
+            <a class="hover:underline decoration-4" href="#">DESIGN_YUNUS_A</a>
         </div>
         </div>
     </div>
